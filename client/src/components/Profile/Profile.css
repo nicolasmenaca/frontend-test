@@ -1,0 +1,118 @@
+:root {
+    --bg-light: #f0f2f5;
+    --bg-white: #ffffff;
+    --accent: #3C8DAD;
+    --accent-light: #d2edf7;
+    --text-title: #1c1e21;
+    --text-subtle: #4b4f56;
+    --text-muted: #606770;
+    --card-radius: 16px;
+    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    background-color: var(--bg-light);
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+.profile-container {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.profile-card {
+    background-color: var(--bg-white);
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-left: 5px solid var(--accent);
+}
+
+.profile-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-title);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-title::before {
+    content: "👤";
+    font-size: 24px;
+}
+
+.profile-card p {
+    font-size: 16px;
+    color: var(--text-subtle);
+    margin: 4px 0;
+}
+
+.profile-card strong {
+    color: var(--text-title);
+}
+
+.post-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.post-header {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text-title);
+    border-bottom: 2px solid var(--accent-light);
+    padding-bottom: 8px;
+    margin-bottom: 5px;
+}
+
+.post-card {
+    background-color: var(--bg-white);
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+    padding: 20px;
+    transition: transform 0.2s ease;
+    border: 1px solid #e4e6eb;
+}
+
+.post-card:hover {
+    transform: translateY(-2px);
+}
+
+.post-content {
+    font-size: 17px;
+    color: var(--text-subtle);
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: var(--text-muted);
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.post-footer span:first-child {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.post-footer span:first-child::before {
+    content: "❤️";
+}
