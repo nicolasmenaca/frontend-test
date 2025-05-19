@@ -5,6 +5,10 @@ services:
     build:
       context: ./client
       dockerfile: Dockerfile
+      args:
+        VITE_AUTH_API_URL: http://localhost:3001/api
+        VITE_USER_API_URL: http://localhost:3002/users
+        VITE_POST_API_URL: http://localhost:3003/api
     container_name: frontend
     ports:
       - "5173:80"
